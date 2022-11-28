@@ -1,0 +1,48 @@
+.contentDate{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+    font-size: 20px;
+
+    .inputDate {
+        width: 10rem;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 18px;
+        border: none;
+        outline: solid 1px gray;
+        color: blue;
+
+        &:focus + .label {
+            top: -10px;
+            font-size: 15px;
+            padding-right: 3px;
+            padding-bottom: 1px;
+        }
+
+        &:valid + .label {
+            top: -10px;
+            font-size: 15px;
+            padding-right: 3px;
+            padding-bottom: 1px;
+        }
+    }
+
+    .label {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        background-color: white;
+        padding: 3px 3px;
+        padding-right: 45px;
+        color: gray;
+
+        &:hover {
+            top: -10px;
+            font-size: 15px;
+            padding-right: 3px;
+            padding-bottom: 1px;
+        }
+    }
+}

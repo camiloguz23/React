@@ -1,0 +1,43 @@
+.container {
+  /* display: flex;
+  flex-direction: column; */
+  position: relative;
+  padding: 1rem;
+}
+
+.input {
+  display: block;
+  width: 30%;
+  padding: 9px 9px;
+  border: none;
+  border-radius: 6px;
+  outline: solid 1px black;
+  
+}
+
+.label {
+  position: absolute;
+  top: 23px;
+  left: 30px;
+  padding: 0 10px;
+  transition: .5s;
+}
+
+.input:focus ,.input:not(:placeholder-shown) {
+  outline: solid 1px red;
+}
+/* OPCION 1 EL INPUT NECESITA EL REQUIRED*/
+// .input:focus +.label, .input:valid+.label {
+//   transform: translateY(-16px);
+//   background-color: white;
+//   font-size: 14px;
+// }
+
+/* OPCION 2 EL INPUT NECESITA TENER EL PLACEHOLDER*/
+
+.input:focus +.label,.input:not(:placeholder-shown)+.label {
+  transform: translateY(-16px);
+  background-color: white;
+  font-size: 14px;
+
+}
