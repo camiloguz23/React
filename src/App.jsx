@@ -4,6 +4,7 @@ import Date from "./date/Date";
 import Select from "./dropdown/DropDown";
 import { peticion } from "./services/http";
 import { SnackBarConfig } from "./services/message";
+import Spinner from "./spinner/Spinner";
 import Switch from "./switchBtn/Switch";
 
 function App() {
@@ -22,12 +23,20 @@ function App() {
     <>
       <SnackBarConfig />
       <div className="container">
-          <input className="input" type="text" id="text" placeholder=" " />
-          <label htmlFor='text' className="label">Input</label>
+        <input className="input" type="text" id="text" placeholder=" " />
+        <label htmlFor="text" className="label">
+          Input
+        </label>
       </div>
-      <Switch/>
-      <Date/>
-      <Select options={['example 1','example 2', 'example 3']} title={'type of example'}/>
+      <Switch />
+      <Date />
+      <Select
+        options={["example 1", "example 2", "example 3"]}
+        title={"type of example"}
+      />
+      <div className="container">
+        <Spinner />
+      </div>
     </>
   );
 }
